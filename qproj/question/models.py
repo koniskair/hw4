@@ -10,6 +10,7 @@ class Post(models.Model):
 	upd_date = models.DateTimeField(auto_now = timezone.now);
 
 	is_public = models.BooleanField(default=True);
+	
 
 class Comment(models.Model):
 	author = models.CharField(max_length = 100);
