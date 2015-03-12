@@ -9,7 +9,7 @@ class PostResource(ModelResource):
     text = fields.CharField(attribute = "text", use_in = "list");
 
     is_public = fields.BooleanField(attribute = "is_public", use_in = "detail");
-    comment = fields.ToManyField('qproj.question.api.CommentResource', 'comment_set', null=True, use_in="detail");
+    comment = fields.ToManyField('qproj.question.api.CommentResource', 'comment_set', null=True, full=True, use_in="detail");
 
 
     class Meta:
